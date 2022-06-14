@@ -7,11 +7,11 @@ import {AppBar, Container, Grid, IconButton, Paper, Toolbar, Typography} from "@
 import {Menu} from "@mui/icons-material";
 import Button from "@mui/material/Button/Button";
 
-export type FilterValueType = "all" | "active" | "completed";
-type TodolistType = {
+export type FilterValuesType = "all" | "active" | "completed";
+export type TodolistType = {
     id: string
     title: string
-    filter: FilterValueType
+    filter: FilterValuesType
 }
 
 type  TasksStateType = {
@@ -53,7 +53,7 @@ export function App() {
         }
     }
 
-    function changeFilter(value: FilterValueType, todolistId: string) {
+    function changeFilter(value: FilterValuesType, todolistId: string) {
         let todolist = todolists.find(tl => tl.id === todolistId);
         if (todolist) {
             todolist.filter = value;

@@ -1,5 +1,5 @@
 import React, {ChangeEvent} from "react";
-import {FilterValueType} from "./App";
+import {FilterValuesType} from "./App";
 import {AddItemForm} from "./AddItemForm";
 import {EditableSpan} from "./EditableSpan";
 import {Checkbox, IconButton} from "@mui/material";
@@ -16,11 +16,11 @@ type PropsType = {
     title: string
     tasks: Array<TaskType>
     removeTask: (taskId: string, todolistId: string) => void
-    changeFilter: (value: FilterValueType, todolistId: string) => void
+    changeFilter: (value: FilterValuesType, todolistId: string) => void
     addTask: (title: string, todolistId: string) => void
     changeTaskStatus: (taskId: string, isDone: boolean, todolistId: string) => void
     changeTaskTitle: (taskId: string, newTitle: string, todolistId: string) => void
-    filter: FilterValueType
+    filter: FilterValuesType
     removeTodolist: (todolistId: string) => void
     changeTodolistTitle: (todolistId: string, newTitle: string) => void
 }
